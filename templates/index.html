@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>AI対話アプリ</title>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="/static/script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            margin-top: 40px;
+            padding: 24px 32px 16px 32px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+        #chat-box {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 16px;
+            background: #fafafa;
+            font-size: 15px;
+        }
+        .input-row {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            align-items: flex-end;
+            width: 100%;
+        }
+        #user-input {
+            flex: 1 1 0;
+            min-width: 0;
+            margin-bottom: 0;
+            height: 40px;
+            resize: none;
+        }
+        #send-button, #mic-button {
+            flex: 0 0 auto;
+            height: 40px;
+            margin-bottom: 0;
+            width: 70px;
+            padding: 0;
+        }
+        #send-button {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        #send-button:hover {
+            background: #1565c0;
+        }
+        #mic-button {
+            background: #e0e0e0;
+            color: #333;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #mic-button:hover {
+            background: #bdbdbd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="chat-box"></div>
+        <div class="input-row">
+            <textarea id="user-input" placeholder="メッセージを入力..."></textarea>
+            <button id="send-button">送信</button>
+            <button id="mic-button" title="音声入力" style="font-size:20px;">🎤</button>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,20 @@
+# Environment variables
+# APIキーなどの秘密情報ファイル
+.env
+
+# Python virtual environment
+# 仮想環境フォルダ
+venv/
+.venv/
+
+# Python cache files
+# Pythonが自動生成するキャッシュファイル
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS-specific files
+# OSが自動生成するファイル
+.DS_Store
+Thumbs.db
