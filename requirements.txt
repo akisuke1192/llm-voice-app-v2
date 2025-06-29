@@ -1,3 +1,4 @@
 Flask 
 gunicorn
 gEvent-websocket 
+python-dotenv
