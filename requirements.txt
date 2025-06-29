@@ -2,3 +2,4 @@ Flask
 gunicorn
 gEvent-websocket 
 python-dotenv
+google-generativeai
